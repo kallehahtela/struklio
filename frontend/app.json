@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "todo-app-scheme",
     "name": "frontend",
     "slug": "frontend",
     "version": "1.0.0",
@@ -25,7 +26,8 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-asset"
+      "expo-asset",
+      "expo-router"
     ]
   }
 }
