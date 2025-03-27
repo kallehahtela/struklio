@@ -1,16 +1,26 @@
-import { View, Text, StyleSheet, StatusBar, SafeAreaView } from "react-native";
-import HomeScreen from "./index";
+import { Tabs } from "expo-router";
 import * as SystemUI from 'expo-system-ui';
+import { useEffect } from "react";
+import { StyleSheet } from "react-native";
 
 export default function RootLayout() {
-    SystemUI.setBackgroundColorAsync('white');
+    useEffect(() => {
+        SystemUI.setBackgroundColorAsync('white');
+    }, []);
 
     return (
-        <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <StatusBar />
-            <View>
-                <HomeScreen />
-            </View>
-        </SafeAreaView>
+        <Tabs>
+            <Tabs.Screen name="home" options={{ title: "Home", tabBarIcon: () => null }} />
+            <Tabs.Screen name="tasks" options={{ title: "Tasks", tabBarIcon: () => null }} />
+            <Tabs.Screen name="settings" options={{ title: "Settings", tabBarIcon: () => null }} />
+        </Tabs>
     );
-};
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});
