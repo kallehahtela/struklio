@@ -21,7 +21,8 @@
     "expo-linking": "~7.0.5",
     "expo-constants": "~17.0.8",
     "expo-system-ui": "~4.0.8",
-    "expo-font": "~13.0.4"
+    "expo-font": "~13.0.4",
+    "expo-splash-screen": "~0.29.22"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

@@ -1,6 +1,7 @@
 {
   "expo": {
     "scheme": "todo-app-scheme",
+    "backgroundColor": "#ffffff",
     "name": "frontend",
     "slug": "frontend",
     "version": "1.0.0",
