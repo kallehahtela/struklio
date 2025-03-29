@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
     btnText: {
         color: 'white',
         fontFamily: 'UrbanistBold',
-        fontSize: 15,
+        fontSize: 16,
     }
 });
