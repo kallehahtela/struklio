@@ -24,7 +24,16 @@ export default function LoginScreen() {
 
                         />
                         <InputField 
+                            placeholder="name"
+                            placeholderTextColor="black"
+
+                        />
+                        <InputField 
                             placeholder="password"
+                            placeholderTextColor="black"
+                        />
+                        <InputField 
+                            placeholder="confirm password"
                             placeholderTextColor="black"
                         />
                     </View>
@@ -32,7 +41,7 @@ export default function LoginScreen() {
                     {/* Login Button UI for now */}
                     <View style={styles.loginBtn}>
                         <TouchableBtn 
-                            text="Login"
+                            text="Sign Up"
                             onPress={() => console.log('Login Pressed')}
                         />
                     </View>
@@ -58,11 +67,11 @@ export default function LoginScreen() {
 
                     {/* Need an account? sign up button */}
                     <View style={styles.newUserContainer}>
-                        <Text style={styles.needAccountText}>I don't have an account?</Text>
+                        <Text style={styles.needAccountText}>I already have an account?</Text>
                         <TouchableOpacity
-                            onPress={() => router.navigate("/signup")}
+                            onPress={() => router.navigate("/login")}
                         >
-                            <Text style={styles.signUpBtn}>Sign up</Text>
+                            <Text style={styles.signUpBtn}>Login</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
