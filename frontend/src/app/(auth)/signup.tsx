@@ -5,6 +5,7 @@ import TouchableBtn from "../../components/TouchableBtn";
 import { useRouter } from "expo-router";
 
 export default function LoginScreen() {
+    // navigation
     const router = useRouter();
 
     return (
