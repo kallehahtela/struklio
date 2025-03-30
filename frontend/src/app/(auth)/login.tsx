@@ -1,10 +1,13 @@
 import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
+
+// Own Components
 import InputField from "../../components/InputField";
 import SocialAuthBtn from "../../components/SocialAuthBtn";
 import TouchableBtn from "../../components/TouchableBtn";
-import { useRouter } from "expo-router";
 
 export default function LoginScreen() {
+    // navigation
     const router = useRouter();
 
     return (
@@ -27,8 +30,17 @@ export default function LoginScreen() {
                             placeholder="password"
                             placeholderTextColor="black"
                         />
+
                     </View>
                     
+                    {/* Forgot password btn UI */}
+                    <View style={{ position: 'relative', left: 100, marginBottom: 10, marginHorizontal: 10}}>
+                        <TouchableOpacity
+                            onPress={() => router.navigate("/forgotpass")}
+                        >
+                            <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+                        </TouchableOpacity>
+                    </View>
                     {/* Login Button UI for now */}
                     <View style={styles.loginBtn}>
                         <TouchableBtn 
@@ -92,6 +104,10 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         width: '100%',
+    },
+    forgotPasswordText: {
+        fontFamily: 'UrbanistSemiBold',
+        color: '#3772FF',
     },
     loginBtn: {
         marginTop: 20,

@@ -1,10 +1,12 @@
 import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
+
+// Custom Components
 import InputField from "../../components/InputField";
 import SocialAuthBtn from "../../components/SocialAuthBtn";
 import TouchableBtn from "../../components/TouchableBtn";
-import { useRouter } from "expo-router";
 
-export default function LoginScreen() {
+export default function SignupScreen() {
     // navigation
     const router = useRouter();
 
